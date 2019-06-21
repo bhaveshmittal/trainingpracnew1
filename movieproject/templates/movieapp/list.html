@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<style media="screen">
+  .jumbotron
+  {
+    background-color: cyan;
+  }
+</style>
+
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="jumbotron bg-success text-center">
+
+        <h1>MOVIE LIST</h1>
+        <br><br>
+        {% if movielist %}
+        <table class="table table-borderless table-dark">
+      <thead>
+        <tr>
+              <th scope="col">S.NO.</th>
+              <th scope="col">Movie</th>
+              <th scope="col">Hero</th>
+              <th scope="col">Releasing Year</th>
+              <th scope="col">Earning</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for movie in movielist %}
+            <tr>
+              <th scope="row">1</th>
+              <td>{{movie.name}}</td>
+              <td>{{movie.hero}}</td>
+              <td>{{movie.year}}</td>
+              <td>{{movie.earning}}</td>
+            </tr>
+            {% endfor %}
+            {% endif %}
+          </tbody>
+
+        </table>
+  </div>
+
+</div>
+  </body>
+</html>
